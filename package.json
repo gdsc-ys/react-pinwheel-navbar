@@ -1,0 +1,43 @@
+{
+  "name": "react-pinwheel-navbar",
+  "version": "1.0.0",
+  "description": "pinwheel shaped react navigation",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -wc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "type": "git",
+    "url": "git+https://github.com/gdsc-ys/react-pinwheel-navbar.git"
+  },
+  "author": "mumwa <hy0903@yonsei.ac.kr>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gdsc-ys/react-pinwheel-navbar/issues"
+  },
+  "homepage": "https://github.com/gdsc-ys/react-pinwheel-navbar#readme",
+  "devDependencies": {
+    "@babel/core": "7.19.0",
+    "@babel/preset-env": "7.19.0",
+    "@babel/preset-react": "7.18.6",
+    "@rollup/plugin-babel": "5.3.1",
+    "eslint": "^8.23.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "prettier": "^2.7.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rollup": "2.79.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  }
+}
