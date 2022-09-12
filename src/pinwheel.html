@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #wrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content:center;
+        }
+        @keyframes rotate {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(10deg);}
+        }
+        .card{
+            box-sizing: border-box;
+            width:80px; height:120px; 
+            box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            padding:10px;
+            position: absolute;
+            transform-origin: bottom left;
+        }
+        @keyframes move {
+            from {top: 0;}
+            to {top: -10px;}
+        }
+        .card:hover{
+            animation-name: move;
+            animation-duration: 0.5s;
+        }
+        .front{
+            clip-path: polygon(0% 0%, 0% 100%, 87% 0%);
+        }
+        .back{
+            z-index: -10;
+        }
+    </style>
+    <div id="wrapper">
+        <div class="card front" style="background-color: #a83332; transform:rotate(0);">1 text</div>
+        <div class="card front" style="background-color: #ce5c32; transform:rotate(30deg);">2 text</div>
+        <div class="card front" style="background-color: #c88235; transform:rotate(60deg);">3 text</div>
+        <div class="card front" style="background-color: #dcd14a; transform:rotate(90deg);">4 text</div>
+        <div class="card front" style="background-color: #d1d74c; transform:rotate(120deg);">5 text</div>
+        <div class="card front" style="background-color: #90bb50; transform:rotate(150deg);">6 text</div>
+        <div class="card front" style="background-color: #3f8e4c; transform:rotate(180deg);">7 text</div>
+        <div class="card front" style="background-color: #4ba59c; transform:rotate(210deg);">8 text</div>
+        <div class="card front" style="background-color: #54a8dd; transform:rotate(240deg);">9 text</div>
+        <div class="card front" style="background-color: #2d6ab0; transform:rotate(270deg);">10 text</div>
+        <div class="card front" style="background-color: #16105b; transform:rotate(300deg);" >11 text</div>
+        <div class="card front" style="background-color: #5f308c; transform:rotate(330deg);">12 text</div>
+
+        <div class="card back" style="background-color: #5f308c; transform:rotate(330deg);">12 text</div>
+        <div class="card back" style="background-color: #16105b; transform:rotate(300deg);" >11 text</div>
+        <div class="card back" style="background-color: #2d6ab0; transform:rotate(270deg);">10 text</div>
+        <div class="card back" style="background-color: #54a8dd; transform:rotate(240deg);">9 text</div>
+        <div class="card back" style="background-color: #4ba59c; transform:rotate(210deg);">8 text</div>
+        <div class="card back" style="background-color: #3f8e4c; transform:rotate(180deg);">7 text</div>
+        <div class="card back" style="background-color: #90bb50; transform:rotate(150deg);">6 text</div>
+        <div class="card back" style="background-color: #d1d74c; transform:rotate(120deg);">5 text</div>
+        <div class="card back" style="background-color: #dcd14a; transform:rotate(90deg);">4 text</div>
+        <div class="card back" style="background-color: #c88235; transform:rotate(60deg);">3 text</div>
+        <div class="card back" style="background-color: #ce5c32; transform:rotate(30deg);">2 text</div>
+        <div class="card back" style="background-color: #a83332; transform:rotate(0);">1 text</div>
+    </div>
+        <script>
+            const gradient = require('gradient-color')
+            const colors = gradient(['#E5404C','#FD743C','#FD9C3C'], 20)
+            console.log(colors)
+        </script>
+</body>
+</html>
