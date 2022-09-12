@@ -2,8 +2,7 @@
   "name": "react-pinwheel-navbar",
   "version": "1.0.0",
   "description": "pinwheel shaped react navigation",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -wc",
@@ -16,7 +15,7 @@
     "url": "git+https://github.com/gdsc-ys/react-pinwheel-navbar.git"
   },
   "author": "mumwa <hy0903@yonsei.ac.kr>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gdsc-ys/react-pinwheel-navbar/issues"
   },
@@ -39,5 +38,8 @@
   "peerDependencies": {
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
+  },
+  "dependencies": {
+    "gradient-color": "^2.0.1"
   }
 }
