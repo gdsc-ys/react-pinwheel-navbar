@@ -1,15 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import PinwheelNavbar from 'react-pinwheel-navbar';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+// import PinwheelNavbar from 'react-pinwheel-navbar';
+import PinwheelNavbar from "./pinwheel/PinwheelNavbar";
+import { colors, texts } from "./pinwheel/value";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const color = ['#FFFFFF', '#FFFFFF', '#FFFFFF'];
+const colorsValue = colors;
+const textsValue = texts;
+
 root.render(
   <React.StrictMode>
-    <PinwheelNavbar color={color} number={10}></PinwheelNavbar>
+    <PinwheelNavbar
+      colors={colorsValue}
+      texts={textsValue}
+      number={30}
+      width={80}
+      height={120}
+    ></PinwheelNavbar>
   </React.StrictMode>
 );
 
