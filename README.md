@@ -46,6 +46,24 @@ const onClicks = [
   function () {
     console.log("4");
   },
+  function () {
+    console.log("5");
+  },
+  function () {
+    console.log("6");
+  },
+  function () {
+    console.log("7");
+  },
+  function () {
+    console.log("8");
+  },
+  function () {
+    console.log("9");
+  },
+  function () {
+    console.log("10");
+  },
 ];
 
 root.render(
@@ -53,7 +71,7 @@ root.render(
     <PinwheelNavbar
       colors={colors}
       texts={texts}
-      number={12}
+      number={9}
       width={80}
       height={120}
       border={"1px solid black"}
@@ -88,48 +106,54 @@ root.render(
   boxShadow: PropTypes__default["default"].string
 ```
 
-**number(Required)**
-Number of card.
+**number(Required)**<br/>
+Number of card.<br/><br/>
 
-**colors(Required)**
-Array of background-color of each card.
-If length of colors less than number, stretching array with gradient-color library.
+**colors(Required)**<br/>
+Array of background-color of each card.<br/>
+If length of colors less than number, stretching array with gradient-color library.<br/><br/>
 
-**texts(Required)**
-Array of text of each card.
-If length of texts shorter than number, spare cards will empty.
+**texts(Required)**<br/>
+Array of text of each card.<br/>
+If length of texts shorter than number, spare cards will empty.<br/><br/>
 
-**links**
-Array of links of each card.
-If length of links shorter than number, spare cards will empty.
+**links**<br/>
+Array of links of each card.<br/>
+If length of links shorter than number, spare cards will empty.<br/><br/>
 
-**onClicks**
-Array of onclick function of each card.
-If length of onClicks shorter than number, spare cards will empty.
+**onClicks**<br/>
+Array of onclick function of each card.<br/>
+If length of onClicks shorter than number, spare cards will empty.<br/><br/>
 
-**width(Required)**
-Number of width, calculated in pixels.
+**width(Required)**<br/>
+Number of width, calculated in pixels.<br/><br/>
 
-**height(Required)**
-Number of height, calculated in pixels.
+**height(Required)**<br/>
+Number of height, calculated in pixels.<br/><br/>
 
-**border**
-border style string of card. Just type like other css.
+**border**<br/>
+border style string of card. Just type like other css.<br/>
+Default is `"none"`.<br/><br/>
 
-**borderRadius**
-border-radius style string of card. Just type like other css.
+**borderRadius**<br/>
+border-radius style string of card. Just type like other css.<br/>
+Default is `"5px"`.<br/><br/>
 
-**textColor**
-color style string of card. Just type like other css.
+**textColor**<br/>
+color style string of card. Just type like other css.<br/>
+Default is `"white"`.<br/><br/>
 
-**fontWeight**
-font-weight style string of card. Just type like other css.
+**fontWeight**<br/>
+font-weight style string of card. Just type like other css.<br/>
+Default is `"bold"`.<br/><br/>
 
-**fontFamily**
-font-family style string of card. Just type like other css.
+**fontFamily**<br/>
+font-family style string of card. Just type like other css.<br/>
+Default is up to your browser.<br/><br/>
 
-**boxShadow**
-style string of card. Just type like other css.
+**boxShadow**<br/>
+style string of card. Just type like other css.<br/>
+Default is `"none"`.<br/><br/>
 
 ## Dependencies
 
