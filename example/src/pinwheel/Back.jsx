@@ -1,12 +1,30 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+Back.propTypes = {
+  style: PropTypes.object.isRequired,
+  text: PropTypes.string.isRequired,
+  boxShadow: PropTypes.string,
+
+  onClick: PropTypes.func,
+  link: PropTypes.string,
+};
 
 export default function Back(props) {
+  const { style, text, boxShadow, onClick, link } = props;
   const backStyle = {
-    boxShadow: "2px 2px 10px 1px rgba(0, 0, 0, 0.3)",
+    boxShadow: boxShadow,
     zIndex: -10,
   };
-  Object.assign(backStyle, props.style);
-  return <div style={backStyle}>{props.text}</div>;
+  // console.log("back click", onClick);
+  // console.log("back link", link);
+  Object.assign(backStyle, style);
+
+  return (
+    <a style={backStyle} onClick={onClick} href={link}>
+      {text}
+    </a>
+  );
 }
 // Back.propTypes = {
 //   style: Object,

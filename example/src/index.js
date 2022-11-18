@@ -4,21 +4,23 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 // import PinwheelNavbar from 'react-pinwheel-navbar';
 import PinwheelNavbar from "./pinwheel/PinwheelNavbar";
-import { colors, texts } from "./pinwheel/value";
+import { colors, texts, links, onClicks } from "./pinwheel/value";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-const colorsValue = colors;
-const textsValue = texts;
 
 root.render(
   <React.StrictMode>
     <PinwheelNavbar
-      colors={colorsValue}
-      texts={textsValue}
-      number={30}
+      colors={colors}
+      texts={texts}
+      number={12}
       width={80}
       height={120}
+      border={"1px solid black"}
+      borderRadius={"5px"}
+      textColor={"black"}
+      fontWeight={"regular"}
+      onClicks={onClicks}
     ></PinwheelNavbar>
   </React.StrictMode>
 );

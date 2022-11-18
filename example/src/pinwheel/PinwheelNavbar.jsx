@@ -1,19 +1,50 @@
 import React from "react";
 import Card from "./Card";
-import Middle from "./Middle";
 import gradient from "gradient-color";
+import PropTypes from "prop-types";
+
+PinwheelNavbar.propTypes = {
+  colors: PropTypes.array.isRequired,
+  texts: PropTypes.array.isRequired,
+
+  links: PropTypes.array,
+  onClicks: PropTypes.array,
+
+  number: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+
+  border: PropTypes.string,
+  borderRadius: PropTypes.string,
+  textColor: PropTypes.string,
+  fontWeight: PropTypes.string,
+  fontFamily: PropTypes.string,
+  boxShadow: PropTypes.string,
+};
 
 export default function PinwheelNavbar(props) {
   let colors = props.colors;
-  const number = props.number;
-  const width = props.width;
-  const height = props.height;
+  const {
+    texts,
+    number,
+    width,
+    height,
+    border,
+    borderRadius,
+    textColor,
+    fontWeight,
+    fontFamily,
+    boxShadow,
+    links,
+    onClicks,
+  } = props;
+
   const fullRadian = Math.PI * 2;
   const quaterRadian = Math.PI / 2;
   const radian = fullRadian / number;
   const wrapper = Math.sqrt(height ** 2 + width ** 2);
 
-  const styleObj = {
+  const boxStyle = {
     height: wrapper * 2 + "px",
     width: wrapper * 2 + "px",
     boxSizing: "border-box",
@@ -28,7 +59,7 @@ export default function PinwheelNavbar(props) {
   }
 
   return (
-    <div style={styleObj}>
+    <div style={boxStyle}>
       {colors.map((color, index) => {
         return (
           <>
@@ -38,25 +69,21 @@ export default function PinwheelNavbar(props) {
               height={height}
               color={color}
               radian={radian}
+              border={border}
+              text={texts[index]}
               index={index}
-              text={props.texts[index]}
+              borderRadius={borderRadius}
+              textColor={textColor}
+              fontWeight={fontWeight}
+              fontFamily={fontFamily}
+              boxShadow={boxShadow}
+              onClick={onClicks && onClicks[index]}
+              link={links && links[index]}
             ></Card>
-            {0 < radian * index && radian * index < quaterRadian && (
-              <>
-                <div></div>
-                <div></div>
-              </>
-            )}
+            {0 < radian * index && radian * index < quaterRadian && <></>}
           </>
         );
       })}
     </div>
   );
 }
-
-// PinwheelNavbar.propTypes = {
-//   colors: Array,
-//   number: Number,
-//   width: Number,
-//   height: Number,
-// };
