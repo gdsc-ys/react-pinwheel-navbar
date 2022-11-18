@@ -2,12 +2,11 @@
   "name": "react-pinwheel-navbar",
   "version": "1.0.0",
   "description": "pinwheel shaped react navigation",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -wc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start"
   },
   "repository": {
     "build": "rollup -c",
@@ -31,6 +30,10 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
+    "jasmine-core": "^4.5.0",
+    "karma": "^6.4.1",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-jasmine": "^5.1.0",
     "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
