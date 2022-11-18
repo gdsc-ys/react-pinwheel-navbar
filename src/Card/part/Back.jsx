@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 Back.propTypes = {
   style: PropTypes.object.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   boxShadow: PropTypes.string,
 
   onClick: PropTypes.func,

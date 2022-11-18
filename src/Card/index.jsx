@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import Front from "./part/Front.jsx";
@@ -10,7 +10,7 @@ import calCoordinate from "../util/calCoordinate";
 
 Card.propTypes = {
   color: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   index: PropTypes.number.isRequired,
   number: PropTypes.number.isRequired,
 

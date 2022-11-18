@@ -5,7 +5,7 @@ Front.propTypes = {
   style: PropTypes.object.isRequired,
   radian: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
 
   onClick: PropTypes.func,
   link: PropTypes.string,

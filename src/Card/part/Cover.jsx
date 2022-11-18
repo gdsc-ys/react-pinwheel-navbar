@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 Cover.propTypes = {
   style: PropTypes.object.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
 
   height: PropTypes.number.isRequired,
 

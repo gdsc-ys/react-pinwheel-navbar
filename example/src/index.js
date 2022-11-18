@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-// import PinwheelNavbar from 'react-pinwheel-navbar';
-import PinwheelNavbar from "./react-pinwheel-navbar";
+import PinwheelNavbar from "react-pinwheel-navbar";
 import { colors, texts, links, onClicks } from "./value";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

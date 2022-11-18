@@ -8,12 +8,23 @@ const plugins = [
   }),
 ];
 
-export default {
-  input,
-  output: {
-    file: "./dist/index.js",
-    format: "es",
-    sourcemap: true,
+export default [
+  {
+    input,
+    output: {
+      file: "./dist/esm/index.js",
+      format: "es",
+      sourcemap: true,
+    },
+    plugins,
   },
-  plugins,
-};
+  {
+    input,
+    output: {
+      file: "./dist/cjs/index.js",
+      format: "cjs",
+      sourcemap: true,
+    },
+    plugins,
+  },
+];
