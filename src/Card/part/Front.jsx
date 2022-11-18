@@ -19,8 +19,6 @@ export default function Front(props) {
     zIndex: 10,
   };
   Object.assign(frontStyle, style);
-  // console.log("front click", onClick);
-  // console.log("front link", link);
   return (
     <a style={frontStyle} name="f" onClick={onClick} href={link}>
       {text}

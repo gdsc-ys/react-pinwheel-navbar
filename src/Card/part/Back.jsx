@@ -16,8 +16,6 @@ export default function Back(props) {
     boxShadow: boxShadow,
     zIndex: -10,
   };
-  // console.log("back click", onClick);
-  // console.log("back link", link);
   Object.assign(backStyle, style);
 
   return (
@@ -26,8 +24,3 @@ export default function Back(props) {
     </a>
   );
 }
-// Back.propTypes = {
-//   style: Object,
-//   radian: Number,
-//   height: Number,
-// };

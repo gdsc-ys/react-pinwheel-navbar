@@ -1,12 +1,18 @@
 import { React } from "react";
-import Front from "./Front";
-import Back from "./Back";
 import PropTypes from "prop-types";
+
+import Front from "./part/Front.jsx";
+import Back from "./part/Back.jsx";
+import Cover from "./part/Cover.jsx";
+
+import { quaterRadian } from "../util/constant";
+import calCoordinate from "../util/calCoordinate";
 
 Card.propTypes = {
   color: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,
+  number: PropTypes.number.isRequired,
 
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
@@ -42,6 +48,8 @@ export default function Card(props) {
 
     link,
     onClick,
+
+    number,
   } = props;
 
   const style = {
@@ -53,6 +61,7 @@ export default function Card(props) {
     padding: "10px",
     color: textColor ?? "white",
     backgroundColor: color,
+    textDecoration: "none",
 
     wordBreak: "break-all",
 
@@ -80,6 +89,14 @@ export default function Card(props) {
         onClick={onClick}
         link={link}
       ></Back>
+      {0 <= radian * index && radian * index < quaterRadian && (
+        <Cover
+          style={style}
+          problemCard={calCoordinate(width, height, number, index)}
+          height={height}
+          text={text}
+        ></Cover>
+      )}
     </>
   );
 }

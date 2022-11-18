@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./Card";
 import gradient from "gradient-color";
 import PropTypes from "prop-types";
+import { fullRadian } from "./util/constant";
 
 PinwheelNavbar.propTypes = {
   colors: PropTypes.array.isRequired,
@@ -38,9 +39,6 @@ export default function PinwheelNavbar(props) {
     links,
     onClicks,
   } = props;
-
-  const fullRadian = Math.PI * 2;
-  const quaterRadian = Math.PI / 2;
   const radian = fullRadian / number;
   const wrapper = Math.sqrt(height ** 2 + width ** 2);
 
@@ -79,8 +77,8 @@ export default function PinwheelNavbar(props) {
               boxShadow={boxShadow}
               onClick={onClicks && onClicks[index]}
               link={links && links[index]}
+              number={number}
             ></Card>
-            {0 < radian * index && radian * index < quaterRadian && <></>}
           </>
         );
       })}

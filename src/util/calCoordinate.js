@@ -1,4 +1,4 @@
-export default function calCoordi(width, height, number, i = 1) {
+export default function calCoordinate(width, height, number, i = 1) {
   const fullrad = Math.PI * 2;
   const onerad = fullrad / number;
   const inRad = onerad * i;

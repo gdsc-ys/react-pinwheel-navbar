@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 // import PinwheelNavbar from 'react-pinwheel-navbar';
-import PinwheelNavbar from "./pinwheel/PinwheelNavbar";
-import { colors, texts, links, onClicks } from "./pinwheel/value";
+import PinwheelNavbar from "./react-pinwheel-navbar";
+import { colors, texts, links, onClicks } from "./value";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -13,7 +13,7 @@ root.render(
     <PinwheelNavbar
       colors={colors}
       texts={texts}
-      number={12}
+      number={30}
       width={80}
       height={120}
       border={"1px solid black"}
@@ -21,6 +21,7 @@ root.render(
       textColor={"black"}
       fontWeight={"regular"}
       onClicks={onClicks}
+      links={links}
     ></PinwheelNavbar>
   </React.StrictMode>
 );
