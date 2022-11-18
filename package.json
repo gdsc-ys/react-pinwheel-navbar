@@ -1,6 +1,6 @@
 {
   "name": "react-pinwheel-navbar",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "pinwheel shaped react navigation",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

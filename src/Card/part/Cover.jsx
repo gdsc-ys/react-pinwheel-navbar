@@ -25,11 +25,6 @@ export default function Cover(props) {
   let leftBottomW = 0;
   let leftBottomH = height;
 
-  console.log(`polygon(${leftTopW}px ${leftTopH}px,
-    ${rightTopW}px ${rightTopH}px,
-    ${rightBottomW}px ${rightBottomH}px,
-    ${leftBottomW}px ${leftBottomH}px);`);
-
   const coverStyle = {
     zIndex: 0,
     clipPath: `polygon(${leftTopW}px ${leftTopH}px,

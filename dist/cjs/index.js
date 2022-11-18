@@ -87,7 +87,6 @@ function Cover(props) {
   var rightBottomH = height - problemCard.rightBottom[1];
   var leftBottomW = 0;
   var leftBottomH = height;
-  console.log("polygon(".concat(leftTopW, "px ").concat(leftTopH, "px,\n    ").concat(rightTopW, "px ").concat(rightTopH, "px,\n    ").concat(rightBottomW, "px ").concat(rightBottomH, "px,\n    ").concat(leftBottomW, "px ").concat(leftBottomH, "px);"));
   var coverStyle = {
     zIndex: 0,
     clipPath: "polygon(".concat(leftTopW, "px ").concat(leftTopH, "px,\n      ").concat(rightTopW, "px ").concat(rightTopH, "px,\n      ").concat(rightBottomW, "px ").concat(rightBottomH, "px,\n      ").concat(leftBottomW, "px ").concat(leftBottomH, "px)")
